@@ -1,0 +1,12 @@
+name: Run Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-firmware:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: ./ext/devops-sandbox-rusefi/.github/workflows/custom-board-build
